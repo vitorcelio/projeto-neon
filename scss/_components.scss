@@ -1,0 +1,88 @@
+.card-depoimentos {
+  width: 100%;
+  max-width: 38.4rem;
+  border-radius: 0.8rem;
+  background-color: rgb(241, 240, 245, 0.55);
+  height: 20.9rem;
+  padding: 3.7rem 3.2rem 2.3rem 3.2rem;
+
+  .user {
+    @include flex(space-between, center, row);
+    margin-bottom: 2.1rem;
+
+    strong {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 112%;
+      letter-spacing: -1px;
+      color: $gray-5;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $gray-4;
+  }
+
+  @include responsive(1117px) {
+    height: 24rem;
+  }
+
+  @include responsive(480px) {
+    height: 25.3rem;
+  }
+}
+
+.card-vantagens {
+  padding: 3.3rem 0;
+  width: 100%;
+  max-width: 83.4rem;
+  border-bottom: 0.1rem solid #e1e0e7;
+  @include flex(space-between, center, row);
+
+  .info {
+    @include flex(space-between, center, row);
+    gap: 4.3rem;
+
+    .text {
+      h3 {
+        color: $gray-4;
+      }
+
+      p {
+        font-size: 1.8rem;
+        color: $gray-3;
+      }
+    }
+  }
+
+  @include responsive(1200px) {
+    .info {
+      gap: 2rem;
+    }
+  }
+
+  @include responsive(991px) {
+    max-width: 100%;
+  }
+
+  @include responsive(632px) {
+    padding: 2.8rem 0;
+    gap: 2rem;
+
+    .info {
+      .text {
+        h3 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+footer {
+  background-color: $blue;
+
+  .container {
+    .top {
+      @include flex(space-between, center, row);
+      padding: 4.9rem 0;
+      border-bottom: 0.2rem solid rgb(73, 197, 253, 0.2);
+
+      .share {
+        @include flex(initial, center, row);
+        gap: 3rem;
+
+        span {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 125%;
+          text-align: right;
+          color: white;
+          opacity: 0.7;
+        }
+
+        ul {
+          @include flex(initial, center, row);
+          gap: 3rem;
+        }
+      }
+    }
+
+    .main {
+      @include flex(space-between, flex-start, row);
+      padding-top: 5.7rem;
+      padding-bottom: 6.2rem;
+      border-bottom: 0.2rem solid rgb(73, 197, 253, 0.2);
+
+      nav {
+        @include flex(space-between, flex-start, row);
+        width: 100%;
+        max-width: 86rem;
+
+        .item {
+          strong {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 2.5rem;
+          }
+
+          ul {
+            @include flex(initial, flex-start, column);
+            gap: 2.9rem;
+
+            li {
+              a {
+                font-size: 1.4rem;
+                color: white;
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+
+      .botoes {
+        @include flex(initial, flex-end, column);
+        gap: 2.4rem;
+
+        button {
+          background-color: rgb(0, 165, 240, 0.23);
+          border-radius: 0.6rem;
+          width: 100%;
+          max-width: 28rem;
+          padding: 1.7rem 2.5rem;
+          @include flex(initial, center, row);
+          gap: 2.4rem;
+
+          .info {
+            @include flex(initial, flex-start, column);
+
+            strong,
+            span {
+              font-size: 1.4rem;
+              color: white;
+            }
+
+            strong {
+              font-weight: 700;
+            }
+
+            span {
+              line-height: 2.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .copy {
+        padding: 3.9rem 0;
+        border-bottom: .4rem solid $yellow;
+
+        .info {
+            width: 100%;
+            max-width: 70.3rem;
+            @include flex(flex-start, flex-start, row);
+            gap: 2.5rem;
+
+            span {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: white;
+                opacity: 0.8;
+            }
+        }
+    }
+  }
+
+  @include responsive(1050px) {
+    .container {
+      .main {
+        nav {
+          max-width: 75rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    .container {
+      .main {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        nav {
+          max-width: 100%;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          .item {
+            width: 33%;
+            margin-bottom: 5rem;
+          }
+        }
+
+        .botoes {
+          position: absolute;
+          bottom: 14rem;
+          right: 0;
+        }
+      }
+
+      .copy {
+        .info {
+          flex-direction: column;
+          align-items: center;
+          max-width: 66.6rem;
+          gap: 1.2rem;
+          margin: 0 auto;
+
+          span, p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(600px) {
+    .container {
+      .botoes {
+        button {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(505px) {
+    .container {
+      .top {
+        flex-direction: column;
+        gap: 3.2rem;
+
+        .share {
+          flex-direction: column;
+        }
+      }
+
+      .main {
+        nav {
+          .item {
+            width: 50%;
+            margin-bottom: 5.3rem;
+          }
+        }
+
+        .botoes {
+          width: 100%;
+          position: static;
+
+          button {
+            justify-content: center;
+            max-width: 100%;
+
+            .info {
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
